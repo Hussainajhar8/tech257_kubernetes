@@ -2,7 +2,7 @@
 
 ## Containerise Application
 
-- Install [Kubernetes](installation).
+- Install [Kubernetes](https://kubernetes.io/docs/tasks/tools/).
 - Retrieve information about services in a Kubernetes cluster: `kubectl get svc`.
 - Navigate inside target app folder.
 - Run `docker init`.
