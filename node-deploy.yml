@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: node-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: node
+  template:
+    metadata:
+      labels:
+        app: node
+    spec:
+      containers:
+      - name: node
+        image: followcrom/sta:v1
+        ports:
+        - containerPort: 80
+        env:
+            - name: DB_HOST
+              value: "mongodb://10.106.25.78:27017/posts"
